@@ -1,41 +1,28 @@
+.page {
+  font-family: 'IBM Plex mono', monospace;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+  min-block-size: 100vh;
+}
+
 .title-decor {
   background-color: var(--accent-color);
   color: var(--secondary-text-color);
   font-weight: bold;
 }
 
-.content__text a {
-  text-shadow: 2px 2px 0 var(--accent-color);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.content__text a:hover {
-  border-bottom: 1px solid var(--text-color);
-}
-
-.content__text a:focus {
-  outline: none;
-}
-
-.content__text a:focus-visible {
-  outline: 1px solid var(--text-color);
-  outline-offset: 2px;
-}
-
-
-.header {
-  display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  grid-template-columns: 1fr;
-  min-block-size: 768px;
-  block-size: 100vh;
-  padding: 10px;
+/* Decorated zone для рамок */
+.decorated-zone {
   position: relative;
 }
 
-.header::before {
-  content: '';  
+.decorated-zone::before {
+  content: '';
   position: absolute;
   top: 10px;
   right: 10px;
@@ -45,7 +32,7 @@
   border-right: 1px solid var(--accent-color);
 }
 
-.header::after {
+.decorated-zone::after {
   content: '';
   position: absolute;
   bottom: 10px;
@@ -56,6 +43,36 @@
   border-left: 1px solid var(--accent-color);
 }
 
+/* Links */
+.content__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.content__link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content__link:focus {
+  outline: none;
+}
+
+.content__link:focus-visible {
+  outline: 1px solid var(--text-color);
+  outline-offset: 2px;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: 10px;
+}
+
 .header__rec-element {
   position: absolute;
   top: 10px;
@@ -64,6 +81,7 @@
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
+  display: var(--rec-visibility);
 }
 
 .header__rec-element::after {
@@ -76,6 +94,16 @@
   background-color: var(--accent-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--accent-color);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .header__theme-menu {
@@ -97,10 +125,12 @@
   line-height: 18px;
   text-transform: lowercase;
   cursor: pointer;
+  min-block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
   border: 1px solid var(--accent-color);
+  opacity: 0.4;
 }
 
 .header__theme-menu-button:focus {
@@ -128,10 +158,12 @@
 .header__description {
   align-self: end;
   justify-self: end;
+  max-inline-size: 491px;
   font-size: 18px;
   line-height: 23px;
 }
 
+/* Main Content */
 .main {
   padding: 40px 10px;
 }
@@ -148,19 +180,26 @@
   color: var(--accent-color);
 }
 
-.content__article,
-.content__advice {
+.content__cards {
+  display: grid;
+  gap: 20px;
+}
+
+.content__card {
   display: grid;
   gap: 10px;
 }
 
-.content__article-title,
-.content__advice-title {
+.content__card-title {
   font-size: 18px;
   line-height: 23px;
 }
 
-.content__text {
+.content__card-title_light {
+  font-weight: normal;
+}
+
+.content__card-text {
   font-size: 18px;
   line-height: 23px;
   font-weight: normal;
@@ -202,29 +241,6 @@
   align-items: center;
   block-size: 100vh;
   min-block-size: 668px;
-  position: relative;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-}
-
-.footer::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
 }
 
 .footer__title {
@@ -235,23 +251,18 @@
   color: var(--title-color);
 }
 
+/* Tablet */
 @media (min-width: 768px) {
   .header {
     padding: 20px;
   }
   
-  .header::before,
-  .header::after {
-    width: 25px;
-    height: 25px;
-  }
-  
-  .header::before {
+  .decorated-zone::before {
     top: 20px;
     right: 20px;
   }
   
-  .header::after {
+  .decorated-zone::after {
     bottom: 20px;
     left: 20px;
   }
@@ -282,26 +293,28 @@
     padding: 60px 20px;
   }
   
-  .content {
+  .content-why,
+  .content-how {
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     align-items: start;
   }
   
-  .content__title {
+  .content-why .content__title,
+  .content-how .content__title {
     grid-column: 1;
   }
   
-  .content__article,
-  .content__how-to {
+  .content-why .content__cards,
+  .content-how .content__how-to {
     grid-column: 2;
   }
   
-  .content:nth-child(2) {
+  .content-what {
     grid-template-columns: 1fr;
   }
   
-  .content:nth-child(2) .content__article {
+  .content-what .content__cards {
     grid-column: 1;
   }
   
@@ -336,18 +349,8 @@
     grid-row: 3;
   }
   
-  .footer::before {
-    top: 20px;
-    right: 20px;
-  }
-  
-  .footer::after {
-    bottom: 20px;
-    left: 20px;
-  }
-
-  .footer__title{
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -361,24 +364,28 @@
     flex-direction: row;
   }
   
-  .content:nth-child(2) {
-    grid-template-columns: 1fr 1fr 1fr;
+  .content-why,
+  .content-how {
+    grid-template-columns: 1fr 2.06fr;
   }
   
-  .content:nth-child(2) .content__title {
+  .content-what {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .content-what .content__title {
     grid-column: 1;
   }
   
-  .content:nth-child(2) .content__article:nth-child(2) {
-    grid-column: 2;
+  .content-what .content__cards {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
   
-  .content:nth-child(2) .content__article:nth-child(3) {
-    grid-column: 3;
-  }
-  
-  .content:nth-child(2) .content__article:nth-child(4) {
-    grid-column: 3;
-    grid-row: 3;
+  .content-what .content__cards .content__card:nth-child(3) {
+    grid-column: 1 / 3;
   }
 }

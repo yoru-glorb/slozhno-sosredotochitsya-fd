@@ -1,26 +1,9 @@
-
 .theme-light {
   --bg-color: #fff1f8;
   --text-color: #353430;
-  --title-color: #FFC2E6;
+  --title-color: #ffc2e6;
   --accent-color: #ff8dcb;
   --secondary-text-color: #353430;
   --bg-image: url(../images/cover-image-light.png);
-}
-
-
-.theme-light .header__rec-element {
-  display: none;
-}
-
-.theme-light .content__text a {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.theme-light .content__text a:hover {
-  border-bottom: 1px solid var(--text-color);
-}
-
-.theme-light .content__text a:focus-visible {
-  outline: 1px solid var(--text-color);
+  --rec-visibility: none;
 }

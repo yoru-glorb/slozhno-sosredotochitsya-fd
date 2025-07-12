@@ -12,53 +12,53 @@
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
   </head>
-  <body>
-      <header class="header">
-        <span class="header__rec-element" aria-hidden="true">REC</span>
-        <nav class="header__theme-menu">
-          <ul class="header__theme-menu-list">
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_type_light"
-              >
-                день
-              </button>
-            </li>
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-                disabled
-              >
-                авто
-              </button>
-            </li>
-            <li class="header__theme-menu-item">
-              <button
-                class="header__theme-menu-button header__theme-menu-button_type_dark"
-              >
-                неон
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <h1 class="header__title">no focus</h1>
-        <p class="header__description title-decor">
-          Что делать, когда не можешь делать ничего или почему нам так сложно
-          сконцентрироваться, особенно когда очень надо
-        </p>
-      </header>
+  <body class="page decorated-zone">
+    <header class="header decorated-zone">
+      <span class="header__rec-element" aria-hidden="true">REC</span>
+      <nav class="header__theme-menu">
+        <ul class="header__theme-menu-list">
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_type_light"
+            >
+              день
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled
+            >
+              авто
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button header__theme-menu-button_type_dark"
+            >
+              неон
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="header__title">no focus</h1>
+      <p class="header__description title-decor">
+        Что делать, когда не можешь делать ничего <br> Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+      </p>
+    </header>
 
-      <main class="main">
-        <section class="content">
-          <h2 class="content__title">Почему сосредоточиться так сложно</h2>
+    <main class="main">
+      <section class="content content-why">
+        <h2 class="content__title">Почему сосредоточиться так сложно</h2>
 
-          <article class="content__article">
-            <h3 class="content__article-title title-decor">Многозадачность</h3>
-            <p class="content__text">
+        <div class="content__cards">
+          <article class="content__card">
+            <h3 class="content__card-title title-decor">Многозадачность</h3>
+            <p class="content__card-text">
               Особенно сложно сосредоточиться, когда задач много и все они —
               важные. Где же легендарная многозадачность, когда она так нужна
               вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
-              её просто не существует. Исследователи <a href="">выяснили</a>,
+              её просто не существует. Исследователи <a class="content__link" href="#">выяснили</a>,
               что мозгу тяжело концентрироваться даже на двух делах
               одновременно. А когда в поле внимания попадает несколько важных
               задач, организм паникует и выделяет кортизол и адреналин —
@@ -67,9 +67,9 @@
             </p>
           </article>
 
-          <article class="content__article">
-            <h3 class="content__article-title title-decor">Дофамин</h3>
-            <p class="content__text">
+          <article class="content__card">
+            <h3 class="content__card-title title-decor">Дофамин</h3>
+            <p class="content__card-text">
               С гормонами стресса всё понятно, но дальше — ещё интереснее. В
               нашей невозможности сосредоточиться замешана и полная
               противоположность стрессу — дофамин. Это вещество участвует в
@@ -80,26 +80,28 @@
               отвлекаешься, тем больше удовольствия получаешь.
             </p>
           </article>
-        </section>
+        </div>
+      </section>
 
-        <section class="content">
-          <h2 class="content__title">Что снижает концентрацию внимания?</h2>
+      <section class="content content-what">
+        <h2 class="content__title">Что снижает концентрацию внимания?</h2>
 
-          <article class="content__article">
-            <h3 class="content__article-title title-decor">Многозадачность</h3>
-            <p class="content__text">
+        <div class="content__cards">
+          <article class="content__card">
+            <h3 class="content__card-title title-decor">Многозадачность</h3>
+            <p class="content__card-text">
               Как концентрация может снижаться из-за… концентрации? Любая
               стрессовая ситуация (и резко меняющийся мир в целом) заставляет
               наш мозг постоянно «сканировать» окружающую среду на предмет
               опасности. Например, читать новости вместо работы. Но быть
               собранными всё время — невозможно. Концентрация — мышца, и она
-              может не выдержать, если не давать ей отдохнуть.
+              может уставать.
             </p>
           </article>
 
-          <article class="content__article">
-            <h3 class="content__article-title title-decor">Еда</h3>
-            <p class="content__text">
+          <article class="content__card">
+            <h3 class="content__card-title title-decor">Еда</h3>
+            <p class="content__card-text">
               «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
               доставляют в мозг энергию и помогают ему лучше работать. Но уходит
               эта энергия также быстро, как и приходит. А мы в результате
@@ -109,9 +111,9 @@
             </p>
           </article>
 
-          <article class="content__article">
-            <h3 class="content__article-title title-decor">Гаджеты</h3>
-            <p class="content__text">
+          <article class="content__card">
+            <h3 class="content__card-title title-decor">Гаджеты</h3>
+            <p class="content__card-text">
               Да-да, это та самая ситуация, когда на экране ноутбука — код, в
               наушниках — подкаст, а на компьютере фоном — ещё и видео с
               забавными утятами. В результате мозг пытается переключиться с
@@ -121,24 +123,26 @@
               тем больше времени затем нужно, чтобы вернуться к работе.
             </p>
           </article>
-        </section>
+        </div>
+      </section>
 
-        <section class="content">
-          <h2 class="content__title">
-            Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
-            секунд)
-          </h2>
+      <section class="content content-how">
+        <h2 class="content__title">
+          Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
+          секунд)
+        </h2>
 
-          <div class="content__how-to">
-            <h3 class="content__article-title title-decor">
-              5 простых (на самом деле не очень) советов
-            </h3>
+        <div class="content__how-to">
+          <h3 class="content__card-title title-decor">
+            5 простых (на самом деле не очень) советов
+          </h3>
 
-            <article class="content__advice">
-              <h4 class="content__article-title title-decor">
+          <div class="content__cards">
+            <article class="content__card">
+              <h4 class="content__card-title content__card-title_light title-decor">
                 Представьте небо и облака
               </h4>
-              <p class="content__text">
+              <p class="content__card-text">
                 Или листья в ручье. Тут дело в лёгкой медитации, которая
                 помогает успокоиться. Ведь часто именно тревожные мысли о
                 сложных задачах как раз и мешают эти сложные задачи делать. В
@@ -150,9 +154,9 @@
               </p>
             </article>
 
-            <article class="content__advice">
-              <h4 class="content__article-title title-decor">Включите музыку</h4>
-              <p class="content__text">
+            <article class="content__card">
+              <h4 class="content__card-title content__card-title_light title-decor">Включите музыку</h4>
+              <p class="content__card-text">
                 Но не любую, а ту, что поможет сосредоточиться. Любимые песни
                 перебивают между собой внимание, которое и так крайне важно
                 направить на задачу. Подойдёт тихая, спокойная, размеренная
@@ -161,11 +165,11 @@
               </p>
             </article>
 
-            <article class="content__advice">
-              <h4 class="content__article-title title-decor">Прогуляйтесь</h4>
-              <p class="content__text">
+            <article class="content__card">
+              <h4 class="content__card-title content__card-title_light title-decor">Прогуляйтесь</h4>
+              <p class="content__card-text">
                 Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-                <a href="">показал</a>, что созерцание природы повышает
+                <a class="content__link" href="#">показал</a>, что созерцание природы повышает
                 концентрацию, в то время как после просмотра городских пейзажей
                 она наоборот понижается. Можно совместить прогулку с физическими
                 упражнениями или бегом — так в мозг поступит ещё больше
@@ -174,9 +178,9 @@
               </p>
             </article>
 
-            <article class="content__advice">
-              <h4 class="content__article-title title-decor">Хорошо ешьте</h4>
-              <p class="content__text">
+            <article class="content__card">
+              <h4 class="content__card-title content__card-title_light title-decor">Хорошо ешьте</h4>
+              <p class="content__card-text">
                 Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
                 которые препятствуют резким скачкам сахара в крови. Например, с
                 высоким содержанием клетчатки: овощи, ягоды, бобовые (нут,
@@ -185,9 +189,9 @@
               </p>
             </article>
 
-            <article class="content__advice">
-              <h4 class="content__article-title title-decor">Читайте</h4>
-              <p class="content__text">
+            <article class="content__card">
+              <h4 class="content__card-title content__card-title_light title-decor">Читайте</h4>
+              <p class="content__card-text">
                 Настоящие бумажные книги. Это правда помогает с концентрацией:
                 чтобы прочитать пост в соцсети, достаточно нескольких минут или
                 даже секунд. А вот интересная книга способна затянуть и на
@@ -195,48 +199,49 @@
               </p>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="gallery">
-          <h2 class="gallery__title title-decor">А можно в картинках?</h2>
-          <div class="gallery__grid">
-            <img
-              class="gallery__image gallery__image_sunset"
-              src="./images/sunset.png"
-              alt="Закат с горизонтом и чайками"
-              loading="lazy"
-            />
-            <img
-              class="gallery__image gallery__image_ice-cream"
-              src="./images/ice-cream.png"
-              alt="Миска мороженого с ягодами"
-              loading="lazy"
-            />
-            <img
-              class="gallery__image gallery__image_tape"
-              src="./images/tape.png"
-              alt="Старые кассеты"
-              loading="lazy"
-            />
-            <img
-              class="gallery__image gallery__image_books"
-              src="./images/books.png"
-              alt="Стопка книг с чашкой"
-              loading="lazy"
-            />
-            <img
-              class="gallery__image gallery__image_street"
-              src="./images/street.png"
-              alt="Пустая улица"
-              loading="lazy"
-            />
-        </section>
-      </main>
+      <section class="gallery">
+        <h2 class="gallery__title title-decor">А можно в картинках?</h2>
+        <div class="gallery__grid">
+          <img
+            class="gallery__image gallery__image_sunset"
+            src="./images/sunset.png"
+            alt="Закат с горизонтом и чайками"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image_ice-cream"
+            src="./images/ice-cream.png"
+            alt="Миска мороженого с ягодами"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image_tape"
+            src="./images/tape.png"
+            alt="Старые кассеты"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image_books"
+            src="./images/books.png"
+            alt="Стопка книг с чашкой"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image_street"
+            src="./images/street.png"
+            alt="Пустая улица"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
 
-      <footer class="footer">
-        <h2 class="footer__title">focus</h2>
-      </footer>
-    </div>
+    <footer class="footer decorated-zone">
+      <h2 class="footer__title">focus</h2>
+    </footer>
 
     <script src="./scripts/script.js"></script>
   </body>
