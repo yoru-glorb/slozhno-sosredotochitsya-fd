@@ -19,6 +19,7 @@
 /* Decorated zone для рамок */
 .decorated-zone {
   position: relative;
+  
 }
 
 .decorated-zone::before {
@@ -130,8 +131,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--accent-color);
-  opacity: 0.4;
+  border: 1px solid rgba(255, 0, 112, 0.4);
 }
 
 .header__theme-menu-button:focus {
@@ -189,7 +189,6 @@
 
 .content__card-title {
   font-size: 18px;
-  height: 23px;
 }
 
 .content__card-title_light {
@@ -296,16 +295,16 @@
   
 }
 
-/* Desktop */
 @media (max-width: 1024px) {
   .main {
     padding: 60px 5px 0 20px;
   }
   
   .header {
-    height: 768px;
-    padding: 20px 0 20px 20px;
+    min-block-size: 768px;
+    padding: 20px;
   }
+
 
   .header__description {
     align-self: self-start;
@@ -328,12 +327,12 @@
     width: 30.76vw;
   }
 
-  .main {
-    padding: 60px 5px 0 20px;
+  .content-why{
+    grid-template-columns: 1fr 2.06fr;
   }
 
   .content-how{
-    grid-template-columns: 0.969fr 2fr;
+    grid-template-columns: 1fr 2.06fr;
     margin-bottom: 78px;
   }
 
@@ -375,7 +374,7 @@
   }
 
   .footer{
-height: 85vh;
+ min-block-size: 768px;
   }
 }
 
@@ -409,10 +408,7 @@ height: 85vh;
     grid-column: 2 / 4;
     grid-row: 3;
   }
-  .main {
-    padding: 60px 5px 20px;
-  }
-  
+
 }
 
 @media (max-width: 768px){
@@ -423,8 +419,8 @@ height: 85vh;
   }
 
    .header {
-    height: 1024px;
-    padding: 20px 3px 20px 20px;
+    min-block-size: 1024px;
+    padding: 20px;
   }
 
   .header__theme-menu {
@@ -434,6 +430,10 @@ height: 85vh;
 
   .header__theme-menu-list {
     flex-direction: column;
+  }
+
+  .main{
+    padding: 60px 20px 0;
   }
 
   .content-why,
@@ -493,19 +493,19 @@ height: 85vh;
   }
 
   .footer {
-    height: 1024px;
+     min-block-size: 1024px;
   }
 }
 
 
 @media (max-width:375px){
 .main{
-  padding: 40px 10px auto;
+  padding: 40px 10px 0;
 }
 
   .header{
     padding: 0 10px 0 10px;
-    height: 668px;
+    min-block-size: 668px;
   }
 
   .header__description {
@@ -527,10 +527,6 @@ height: 85vh;
     max-width: 355px;
   }
 
-  .heighting__title{
-    height: 47px;
-  }
-
   .gallery__title{
     margin-bottom: 10px;
   }
@@ -545,7 +541,6 @@ height: 85vh;
   }
 
   .footer{
-    height: 668px;
+     min-block-size: 668px;
   }
-
 }
