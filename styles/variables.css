@@ -1,4 +1,4 @@
-root {
+:root {
   --bg-color: #000028;
   --text-color: #f1b2ce;
   --title-color: #db00ff;
@@ -6,16 +6,5 @@ root {
   --secondary-text-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
   --rec-visibility: inline;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-color: #fff1f8;
-    --text-color: #353430;
-    --title-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --secondary-text-color: #353430;
-    --bg-image: url(../images/cover-image-light.png);
-    --rec-visibility: none;
-  }
+  --navigation-text: #353430;
 }
