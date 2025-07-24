@@ -7,4 +7,6 @@
   --bg-image: url(../images/cover-image-dark.png);
   --rec-visibility: inline;
   --navigation-text:#ff0070;
+  --color-rgba: rgb(255, 0, 112, 0.4);
 }
+
