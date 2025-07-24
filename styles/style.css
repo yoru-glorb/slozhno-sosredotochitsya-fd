@@ -203,10 +203,11 @@
   font-weight: normal;
 }
 
+/* реалитивное позиционирование у меня описано в .decorated-zone, это общий селектор , как для хэдера, так и для футера XD */
+
 .content__card-text {
   font-size: 18px;
   line-height: 23px;
-  font-weight: normal;
   padding-top: 10px;
 }
 
