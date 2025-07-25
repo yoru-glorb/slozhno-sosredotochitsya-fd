@@ -56,7 +56,7 @@
 }
 
 .content__link:focus {
-  outline: none;
+ border: 1px solid var(--navigation-text);
 }
 
 .content__link:focus-visible {
@@ -134,13 +134,17 @@
   border: 1px solid var(--color-rgba);;
 }
 
-.header__theme-menu-button:focus {
-  outline: none;
+
+.header__theme-menu-button_type_auto:focus{
+  border: none;
+  border-bottom: 1px solid var(--navigation-text);
 }
 
-.header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--navigation-textr);
+.header__theme-menu-button_type_light:focus{
+  border: none;
+  border-bottom: 1px solid var(--navigation-text);
 }
+
 
 .header__theme-menu-button_active {
   border: 1px solid var(--navigation-text);
@@ -199,7 +203,7 @@
   font-size: 18px;
 }
 
-.content__card-title_light {
+.content__card-title_light { 
   font-weight: normal;
 }
 
@@ -313,6 +317,10 @@
   .header {
     min-block-size: 768px;
     padding: 20px;
+  }
+
+  .content-what .content__title{
+    max-width: 315px;
   }
 
 

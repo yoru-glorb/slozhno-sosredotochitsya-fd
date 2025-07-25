@@ -7,6 +7,17 @@
   --bg-image: url(../images/cover-image-dark.png);
   --rec-visibility: inline;
   --navigation-text: #353430;
+  --color-rgba: rgb(53, 52, 48, 0.4);
+
+   --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --secondary-text-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --rec-visibility: inline;
+  --navigation-text:#ff0070;
+  --color-rgba: rgb(255, 0, 112, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
@@ -19,5 +30,20 @@
     --bg-image: url(../images/cover-image-light.png);
     --rec-visibility: none;
     --navigation-text: #353430;
+    --color-rgba: rgb(53, 52, 48, 0.4);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --secondary-text-color: #000028;
+  --bg-image: url(../images/cover-image-dark.png);
+  --rec-visibility: inline;
+  --navigation-text:#ff0070;
+  --color-rgba: rgb(255, 0, 112, 0.4);
   }
 }
